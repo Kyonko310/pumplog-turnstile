@@ -1,0 +1,99 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background: #f4f7f5;
+  color: #17201b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: linear-gradient(180deg, #f7faf8 0%, #eef5f1 100%);
+}
+
+.card {
+  width: min(100%, 390px);
+  padding: 28px 22px 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #dfe9e3;
+  border-radius: 20px;
+  box-shadow: 0 14px 38px rgba(25, 70, 47, 0.08);
+}
+
+.brand {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #168453;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+h1 { margin: 0; font-size: 22px; letter-spacing: 0.01em; }
+
+.lead {
+  margin: 10px 0 22px;
+  color: #607068;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.widget {
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.status {
+  min-height: 22px;
+  margin: 12px 0 16px;
+  color: #607068;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.status[data-kind="success"] { color: #107446; font-weight: 700; }
+.status[data-kind="error"] { color: #a04432; }
+
+.button {
+  width: 100%;
+  min-height: 46px;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary { margin-bottom: 10px; border: 0; background: #168453; color: #fff; }
+.secondary { border: 1px solid #cfdbd4; background: transparent; color: #415048; }
+
+.note {
+  margin: 18px 0 0;
+  color: #829088;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+[hidden] { display: none !important; }
+
+@media (prefers-color-scheme: dark) {
+  :root { background: #101512; color: #f1f6f3; }
+  body { background: #101512; }
+  .card { background: #19211c; border-color: #2c3931; box-shadow: none; }
+  .lead, .status { color: #a8b6ae; }
+  .status[data-kind="success"] { color: #65d99e; }
+  .status[data-kind="error"] { color: #f09b88; }
+  .secondary { border-color: #425047; color: #d2dcd6; }
+}

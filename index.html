@@ -1,10 +1,32 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>PUMPLOG Verification</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self'; frame-src https://challenges.cloudflare.com; connect-src https://challenges.cloudflare.com; base-uri 'none'; form-action 'none'"
+  >
+  <title>PUMPLOG セキュリティ確認</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-  PUMPLOG verification endpoint
+  <main class="card" aria-labelledby="title">
+    <div class="brand" aria-hidden="true">P</div>
+    <h1 id="title">セキュリティ確認</h1>
+    <p class="lead">続行するため、以下の確認を完了してください。</p>
+
+    <div id="widget" class="widget" aria-label="セキュリティ確認"></div>
+    <p id="status" class="status" role="status" aria-live="polite">
+      確認画面を準備しています…
+    </p>
+
+    <button id="retry" class="button primary" type="button" hidden>もう一度試す</button>
+    <button id="cancel" class="button secondary" type="button">キャンセル</button>
+
+    <p class="note">この確認画面でパスワードなどを入力することはありません。</p>
+  </main>
 </body>
 </html>

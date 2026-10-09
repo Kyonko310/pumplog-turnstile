@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "TEAM_ID.jp.pumplog.app"
+        ],
+        "components": [
+          {
+            "/": "/auth/*",
+            "comment": "PUMPLOG authentication callbacks"
+          }
+        ]
+      }
+    ]
+  }
+}
